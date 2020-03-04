@@ -25,28 +25,28 @@ public class HeroTester {
 
 		/* Captain Marvel and Green Lantern are humans who
 		 * acquire their powers temporarily */
-		EnhancedHuman CaptainMarvel = 
+		EnhancedHuman CaptainMarvel =
 			new EnhancedHuman("Billy Batson",
 					"Captain Marvel",
 					new SuperPower[] {Flight,
 					SuperStrength,
 					Invulnerability});
-		EnhancedHuman GreenLantern = 
+		EnhancedHuman GreenLantern =
 			new EnhancedHuman("Hal Jordan",
 					"Green Lantern",
 					new SuperPower[] {Flight,
 					SuperStrength,
 					SuperSpeed,
 					Invulnerability});
-
-		/* Superman and Wonder Woman are superhumans */
-		SuperHuman WonderWoman = 
-			new SuperHuman("Wonder Woman", 
+//
+//		/* Superman and Wonder Woman are superhumans */
+		SuperHuman WonderWoman =
+			new SuperHuman("Wonder Woman",
 					"Diana Prince",
 					new SuperPower[]{SuperStrength,
 					SuperIntellect});
-		SuperHuman Superman = 
-			new SuperHuman("Superman", 
+		SuperHuman Superman =
+			new SuperHuman("Superman",
 					"Clark Kent",
 					new SuperPower[] {Flight,
 					SuperStrength,
@@ -75,7 +75,7 @@ public class HeroTester {
 
 		// Now let's try enhanced humans 
 		screen.println(" 5. As a mortal Captain Marvel is " +
-				"meek and has no powers [Billy Batson, 0]: " + 
+				"meek and has no powers [Billy Batson, 0]: " +
 				CaptainMarvel.currentIdentity() + ", " +
 				CaptainMarvel.totalPower());
 		CaptainMarvel.switchIdentity();
@@ -104,22 +104,22 @@ public class HeroTester {
 		screen.println("12. But unless he recharges the ring " +
 				"every day he changes back [Hal Jordan, 0]: " +
 				GreenLantern.currentIdentity() + ", " +
-		        GreenLantern.totalPower());		
+		        GreenLantern.totalPower());
 		screen.println("13. Can Hal Jordan fly across the Galaxy [No]: " +
 				(GreenLantern.hasPower(Flight) ? "Yes" : "No"));
 		GreenLantern.switchIdentity();
-		
-		screen.println();
-		
 
-		// Finally, let's try superhumans 
+		screen.println();
+//
+//
+//		// Finally, let's try superhumans
 		screen.println("14. When he first arrived on Earth, Superman already " +
-				"had incredible powers [Superman, 385]: " + 
+				"had incredible powers [Superman, 385]: " +
 				Superman.currentIdentity() + ", " +
 		        Superman.totalPower());
 		Superman.switchIdentity();
 		screen.println("15. He retains his superpowers even in his " +
-				"secret identity [Clark Kent, 385]: " + 
+				"secret identity [Clark Kent, 385]: " +
 				Superman.currentIdentity() + ", " +
 		        Superman.totalPower());
 		Superman.losePowers(new SuperPower[] {SuperStrength, Invulnerability});
